@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="star-rating.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="stores-list-container">
+            <h2 class="stores-list-container__title">Stores list</h2>
+            <form class="stores-list-form">
+                <input type="text" class="stores-list-form__text-input" placeholder="Search">
+                <button class="stores-list-form__clear-button"><i class="fas fa-times-circle"></i></button>
+                <input type="submit" class="stores-list-form__search-button" value="&#128270">
+            </form>
+            <div class="stores-list-container__collapse-pin-container">
+                <button class="stores-list-container__collapse-button"><i class="fas fa-chevron-up"></i></button>
+                <button class="stores-list-container__pin-button"><i class="fas fa-thumbtack"></i></button>
+            </div>
+            
+        
+            <ul class="stores-list"></ul>
+
+            <footer class="stores-list__footer">
+                <button class="stores-footer__create-button"><i class="fas fa-plus"></i> Create</button>
+            </footer>
+        </aside>
+
+        <main class="store-details-container">
+            <h2 class="store-details-container__title">Null</h2>
+            
+        </main>
+
+        <div class="add-store-modal-container">
+            <div class="add-store-modal">
+                <h2 class="add-store-modal__title">Create new store</h2>
+                <form class="add-store-modal__form">
+                    <div class="add-store-modal__form-fields">
+                        <label class="add-store-modal__form-label add-store-modal__form-label_name">*Name:
+                            <input type="text" class="add-store-modal__form-input add-store-modal__form-input_name" required>
+                        </label>
+                        <label class="add-store-modal__form-label add-store-modal__form-label_email">*Email:
+                            <input type="email" class="add-store-modal__form-input add-store-modal__form-input_email" required>
+                        </label>
+                        <label class="add-store-modal__form-label add-store-modal__form-label_phone-num">*Phone number:
+                            <input type="tel" class="add-store-modal__form-input add-store-modal__form-input_phone-num" required>
+                        </label>
+                        <label class="add-store-modal__form-label add-store-modal__form-label_address">*Address:
+                            <input type="text" class="add-store-modal__form-input add-store-modal__form-input_address" required>
+                        </label>
+                        <label class="add-store-modal__form-label add-store-modal__form-label_date">*Est. date:
+                            <input type="date" class="add-store-modal__form-input add-store-modal__form-input_date" required>
+                        </label>
+                        <label class="add-store-modal__form-label add-store-modal__form-label_area">*Floor area:
+                            <input type="number" class="add-store-modal__form-input add-store-modal__form-input_area" required>
+                        </label>
+                    </div>
+                    <div class="add-store-modal__form-buttons">
+                        <input type="submit" class="add-store-modal__form-button add-store-modal__form-button_submit" value="Submit">
+                        <button class="add-store-modal__form-button add-store-modal__form-button_close">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="add-product-modal-container">
+            <div class="add-product-modal">
+                <h2 class="add-product-modal__title">Create new product</h2>
+                <form class="add-product-modal__form">
+                    <div class="add-product-modal__form-fields">
+                        <label class="add-product-modal__form-label add-product-modal__form-label_name">*Name:
+                            <input type="text" class="add-product-modal__form-input add-product-modal__form-input_name" required>
+                        </label>
+                        <label class="add-product-modal__form-label add-product-modal__form-label_price">*Price:
+                            <input type="number" class="add-product-modal__form-input add-product-modal__form-input_price" required>
+                            USD
+                        </label>
+                        <label class="add-product-modal__form-label add-product-modal__form-label_specs">*Specs:
+                            <input type="text" class="add-product-modal__form-input add-product-modal__form-input_specs" required>
+                        </label>
+                        <label class="add-product-modal__form-label add-product-modal__form-label_Rating">*Rating:
+                            <input type="number" max="5" min="0" class="add-product-modal__form-input add-product-modal__form-input_rating" required>
+                        </label>
+                        <label class="add-product-modal__form-label add-product-modal__form-label_supplier">*Supplier info:
+                            <input type="text" class="add-product-modal__form-input add-product-modal__form-input_supplier" required>
+                        </label>
+                        <label class="add-product-modal__form-label add-product-modal__form-label_madein">*Made in:
+                            <input type="text" class="add-product-modal__form-input add-product-modal__form-input_madein" required>
+                        </label>
+                        <label class="add-product-modal__form-label add-product-modal__form-label_company">*Company name:
+                            <input type="text" class="add-product-modal__form-input add-product-modal__form-input_company" required>
+                        </label>
+                        <label class="add-product-modal__form-label add-product-modal__form-label_status">*Status
+                            <select class="add-product-modal__select" required>
+                                <option value="" class="add-product-modal__select-option add-product-modal__select-option_null" selected disabled>Status</option>
+                                <option value="OK" class="add-product-modal__select-option add-product-modal__select-option_ok">OK</option>
+                                <option value="STORAGE" class="add-product-modal__select-option add-product-modal__select-option_storage">STORAGE</option>
+                                <option value="OUT_OF_STOCK" class="add-product-modal__select-option add-product-modal__select-option_out">OUT_OF_STOCK</option>
+                            </select>
+                        </label>
+                        </div> 
+                        <div class="add-product-modal__form-buttons">
+                            <input type="submit" class="add-product-modal__form-button add-product-modal__form-button_submit" value="Submit">
+                            <button class="add-product-modal__form-button add-product-modal__form-button_close">Close</button>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="edit-product-modal-container">
+            <div class="edit-product-modal">
+                <h2 class="edit-product-modal__title">Edit product</h2>
+                <form class="edit-product-modal__form">
+                    <div class="edit-product-modal__form-fields">
+                        <label class="edit-product-modal__form-label edit-product-modal__form-label_name">*Name:
+                            <input type="text" class="edit-product-modal__form-input edit-product-modal__form-input_name" required>
+                        </label>
+                        <label class="edit-product-modal__form-label edit-product-modal__form-label_price">*Price:
+                            <input type="number" class="edit-product-modal__form-input edit-product-modal__form-input_price" required>
+                            USD
+                        </label>
+                        <label class="edit-product-modal__form-label edit-product-modal__form-label_specs">*Specs:
+                            <input type="text" class="edit-product-modal__form-input edit-product-modal__form-input_specs" required>
+                        </label>
+                        <label class="edit-product-modal__form-label edit-product-modal__form-label_Rating">*Rating:
+                            <input type="number" max="5" min="0" class="edit-product-modal__form-input edit-product-modal__form-input_rating" required>
+                        </label>
+                        <label class="edit-product-modal__form-label edit-product-modal__form-label_supplier">*Supplier info:
+                            <input type="text" class="edit-product-modal__form-input edit-product-modal__form-input_supplier" required>
+                        </label>
+                        <label class="edit-product-modal__form-label edit-product-modal__form-label_madein">*Made in:
+                            <input type="text" class="edit-product-modal__form-input edit-product-modal__form-input_madein" required>
+                        </label>
+                        <label class="edit-product-modal__form-label edit-product-modal__form-label_company">*Company name:
+                            <input type="text" class="edit-product-modal__form-input edit-product-modal__form-input_company" required>
+                        </label>
+                        <label class="edit-product-modal__form-label edit-product-modal__form-label_status">*Status
+                            <select class="edit-product-modal__select" required>
+                                <option value="" class="edit-product-modal__select-option edit-product-modal__select-option_null" selected disabled>Status</option>
+                                <option value="OK" class="edit-product-modal__select-option edit-product-modal__select-option_ok">OK</option>
+                                <option value="STORAGE" class="edit-product-modal__select-option edit-product-modal__select-option_storage">STORAGE</option>
+                                <option value="OUT_OF_STOCK" class="edit-product-modal__select-option edit-product-modal__select-option_out">OUT_OF_STOCK</option>
+                            </select>
+                        </label>
+                        </div> 
+                        <div class="edit-product-modal__form-buttons">
+                            <input type="submit" class="edit-product-modal__form-button edit-product-modal__form-button_submit" value="Submit">
+                            <button class="edit-product-modal__form-button edit-product-modal__form-button_close">Close</button>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="confirm-popup-container">
+            <div class="confirm-popup">
+                <h4 class="confirm-popup__text">Do you really want to delete this product?</h4>
+                <div class="comfirm-popup__buttons">
+                    <button class="confirm-popup__yes-button">Yes</button>
+                    <button class="confirm-popup__no-button">No</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-after-deleting-product">Product has been deleted successfully</div>
+        <div class="message-after-editing-product">Product has been edited successfully</div>
+        <div class="message-after-creating-product">Product has been created successfully</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

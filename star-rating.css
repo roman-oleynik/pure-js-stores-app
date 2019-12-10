@@ -1,0 +1,56 @@
+.star-rating {
+    position: relative;
+    width: 70px;
+    height: 14px;
+    background-size: 14px auto;
+    cursor: pointer;
+}
+.rating-label {
+    position: absolute;
+    margin: 0;
+    height: 14px;
+    width: 14px;
+    top: 0;
+    left: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+.rating-label:focus {
+    outline: none;
+}
+.star-input:checked + .rating-label,
+.rating-label:hover {
+    background-image: url(img/star_active.png);
+}
+.rating-label:hover ~ .rating-label {
+    background-image: url(img/star.png);
+}
+.rating-label:nth-of-type(1) {
+    width: 14px;
+    z-index: 5;
+}
+.rating-label:nth-of-type(2) {
+    width: 28px;
+    z-index: 4;
+}
+.rating-label:nth-of-type(3) {
+    width: 42px;
+    z-index: 3;
+}
+.rating-label:nth-of-type(4) {
+    width: 56px;
+    z-index: 2;
+}
+.rating-label:nth-of-type(5) {
+    width: 70px;
+    z-index: 1;
+}
+.star-input {
+    position: absolute;
+    height: 1px;  
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
